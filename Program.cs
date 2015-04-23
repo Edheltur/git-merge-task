@@ -41,7 +41,7 @@ namespace Kontur.Courses.Git
 				if (!char.IsWhiteSpace(ch))
 					res[res.Count - 1] += ch;
 			}
-			return res.ToArray();
+			return res.Select(item => item.Trim()).ToArray();
 		}
 
 		private static int GetCharClass(char c)
